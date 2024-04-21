@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #76ba99;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  height: 80px;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  list-style: none;
+  margin: 0 0.5rem;
+}
+
+nav .navLink {
+  text-decoration: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 0.6rem;
+}
+
+nav .navLink:hover {
+  background-color: #557c55;
+}
+
+.main {
+  min-height: calc(100vh - 110px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fadcac;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.main h2 {
+  padding: 2em;
+}
+
+.titleImg {
+  width: 50vw;
+  height: 50vw;
+}
+
+.titleImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Select page */
+.vegContainer {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vegCard {
+  position: relative;
+  margin: 0.2rem;
+  padding: 16px;
+  display: inline;
+}
+
+.btnSelect {
+  cursor: pointer;
+  border: 2px solid rgb(122, 74, 41);
+  box-shadow: 2px -2px 5px 4px rgb(122, 74, 41);
+}
+
+.infoCard {
+  position: absolute;
+  width: 300px;
+  z-index: 2;
+  background-color: #f2ffe9;
+  text-align: left;
+  padding: 1rem;
+}
+
+.infoCard h2 {
+  display: inline-block;
+  padding-bottom: 0.5em;
+  margin: 0.5em;
+  border-bottom: 3px solid #fa7070;
+}
+
+.infoCard p {
+  margin: 0.5rem;
+}
+
+.delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 6px 14px;
+  background-color: hsl(169, 87%, 15%);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.vegTitle {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0.3rem;
+}
+
+.sectionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectedContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnUnselect {
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: none;
+  width: 250px;
+  box-shadow: 2px -2px 5px 4px rgb(122, 74, 41);
+}
+
+.createGardenBtn {
+  margin: 0.5em;
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  border: none;
+  width: 250px;
+  align-self: center;
+  background-color: #525e75;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #fa7070;
+  cursor: pointer;
+}
+
+.toTopBtn {
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: none;
+  width: 150px;
+  background-color: #525e75;
+  color: white;
+  cursor: pointer;
+}
+
+/* Error page */
+
+.errorPage * {
+  margin: 1rem;
+}
+
+.errorPage button {
+  padding: 1em;
+  background-color: #76ba99;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  background-color: #158467;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* #76ba99 */
+/* #ADCF9F */
+/* #CED89E */
+
+/* #FA7070 */
+/* #557C55 */
+/* #F2FFE9 */
+/* #A6CF98 */
+
+/* #186F65 */
+/* #B5CB99 */
+/* #FCE09B */
+
+/* #F1DDBF */
+/* #525E75 */
+/* #78938A */
+/* #92BA92 */
+
+/* #FADCAC */
+/* #158467 */
+/* #197163 */
+/* #065446 */
