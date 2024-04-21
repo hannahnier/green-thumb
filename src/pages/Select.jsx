@@ -54,7 +54,13 @@ const Select = () => {
             </button>
           )}
 
-          {gardenActive && <Garden refProp={myRef} />}
+          {gardenActive && (
+            <Garden
+              refProp={myRef}
+              vegSelected={vegSelected}
+              setVegSelected={setVegSelected}
+            />
+          )}
         </div>
       )}
     </div>
