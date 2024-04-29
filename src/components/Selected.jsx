@@ -25,7 +25,7 @@ const Selected = ({
   };
 
   return (
-    <div className="sectionBox">
+    <div className="selected">
       <h2>My vegetables</h2>
       <div className="vegContainer">
         {vegSelected.map((veg) => (

@@ -1,4 +1,4 @@
-const Infobox = ({ vegActive, veg }) => {
+const Infobox = ({ vegActive }) => {
   return (
     <div className="infoCard">
       <h2>{vegActive.name}</h2>

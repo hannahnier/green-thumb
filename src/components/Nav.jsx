@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import Home from "../pages/Home";
-import Select from "../pages/Select";
+import Create from "../pages/Create";
 
 export const routes = [
   { name: "Home", path: "/", element: <Home />, id: 1 },
-  { name: "Create", path: "/select", element: <Select />, id: 2 },
+  { name: "Create", path: "/create", element: <Create />, id: 2 },
 ];
 
 const Nav = () => {

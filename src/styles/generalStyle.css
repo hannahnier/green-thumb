@@ -1,11 +1,16 @@
+@import url(https://fonts.bunny.net/css?family=fragment-mono:400|abel:400);
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Fragment Mono", monospace;
+  /* border: 1px solid hotpink; */
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: #fadcac;
 }
 
 header {
@@ -46,23 +51,103 @@ nav .navLink:hover {
   background-color: #557c55;
 }
 
-.main {
+.wrapper {
+  width: 100%;
   min-height: calc(100vh - 110px);
   display: flex;
-  align-items: center;
   flex-direction: column;
-  background-color: #fadcac;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: clamp(320px, 70vw, 1000px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 80px;
   margin-bottom: 30px;
 }
 
-.main h2 {
-  padding: 2em;
+.main .textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h1 {
+  font-size: 1.5rem;
+  display: inline;
+  padding: 0.5em;
+  color: white;
+  background-color: #525e75;
+  border-radius: 20%;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.main h1 {
+  margin-top: 1em;
+}
+
+.main .homeP {
+  color: #525e75;
+  background-color: #76ba99;
+  border-radius: 1em;
+  padding: 1em;
+  width: 350px;
+}
+
+.main .link,
+.createGardenBtn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em;
+  color: #525e75;
+  background-color: #fa7070;
+  border-radius: 20%;
+  border: 4px dotted #158467;
+  font-family: "Fragment Mono", monospace;
+  text-decoration: none;
+  animation: wobble 3s ease-in-out 1.5s infinite both;
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes wobble {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.03);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.main .link:hover {
+  transform: scale(1.03);
+  animation: none;
 }
 
 .titleImg {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
+  margin: 3rem;
 }
 
 .titleImg img {
@@ -72,11 +157,24 @@ nav .navLink:hover {
   box-shadow: 5px 5px 5px 5px #44331d, -5px -5px 5px 5px #44331d;
 }
 
-/* Select page */
+/* page "Create" */
+
+.main .createTitle {
+  margin: 2em;
+  font-size: 1.1rem;
+  display: inline;
+  padding: 0.5em;
+  color: white;
+  background-color: #525e75;
+  border-radius: 20%;
+  text-decoration: none;
+  font-style: italic;
+}
+
 .vegContainer {
-  width: 90vw;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .vegCard {
@@ -109,7 +207,14 @@ nav .navLink:hover {
 }
 
 .infoCard p {
+  font-size: 1.2em;
   margin: 0.5rem;
+  font-family: "Abel", sans-serif;
+}
+
+.infoCard strong {
+  font-family: "Abel", sans-serif;
+  color: #181f29;
 }
 
 .delete {
@@ -130,15 +235,22 @@ nav .navLink:hover {
   padding: 0.3rem;
 }
 
-.sectionBox {
+.selected {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Component "Selected" */
+
 .selectedContainer {
   display: flex;
   flex-direction: column;
+  margin: 1.5rem;
+}
+
+.selectedContainer h2 {
+  margin: 1em;
 }
 
 .btnUnselect {
@@ -153,16 +265,67 @@ nav .navLink:hover {
 .createGardenBtn {
   margin: 0.5em;
   padding: 1em;
-  font-size: 1em;
-  border-radius: 0.5em;
-  border: none;
   width: 250px;
   align-self: center;
-  background-color: #525e75;
-  color: white;
-  font-weight: bold;
-  border: 2px solid #fa7070;
   cursor: pointer;
+}
+
+/* My Garden (Component "Garden") */
+
+.main.garden h2.gardenTitle {
+  border: 5px dotted #158467;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+.gardenBox {
+  display: flex;
+}
+
+.patch {
+  position: relative;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.patch img.patchImg {
+  width: 100%;
+}
+
+.patch .veg {
+  position: absolute;
+  width: 80px;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+}
+
+.patch .arrow {
+  position: absolute;
+  top: calc(50% - 20px);
+  background-color: white;
+  border: none;
+  padding: 0.5em;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.patch .arrow:hover {
+  background-color: #76ba99;
+}
+
+.patch .arrowToLeft {
+  left: 0;
+}
+
+.patch .arrowToRight {
+  right: 0;
+}
+
+.patch .infoCard {
+  width: 220px;
 }
 
 .toTopBtn {
@@ -200,9 +363,29 @@ footer {
   left: 0;
   width: 100%;
   height: 30px;
+  margin-top: 30px;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 990px) {
+  .home {
+    flex-direction: row;
+  }
+  .titleImg {
+    margin: 1rem;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .titleImg {
+    width: 350px;
+    margin: 3rem;
+  }
 }
 
 /* #76ba99 */
@@ -227,3 +410,8 @@ footer {
 /* #158467 */
 /* #197163 */
 /* #065446 */
+
+/* Problems:
+- Infobox erzeugt bei Elementen rechts und unten beim Hovern Overflow 
+- falsche useStates noch aus props rauslöschen 
+*/
