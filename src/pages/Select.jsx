@@ -12,12 +12,16 @@ const Select = () => {
   const [gardenFirstActive, setGardenFirstActive] = useState(true);
 
   const myRef = useRef(null);
-  const executeScroll = () => myRef.current.scrollIntoView();
+
+  const executeScroll = () => {
+    myRef.current ? myRef.current.scrollIntoView() : null;
+  };
+
   useEffect(() => {
     if (gardenActive && myRef.current) {
       executeScroll();
     }
-  }, [gardenActive]);
+  }, [gardenActive, myRef]);
 
   return (
     <div className="main">

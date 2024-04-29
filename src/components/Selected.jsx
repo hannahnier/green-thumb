@@ -36,10 +36,10 @@ const Selected = ({
             style={{
               background: `url(${wood2})`,
             }}
-            onMouseEnter={() => {
-              setInfoActive(veg);
-            }}
-            onMouseLeave={() => setInfoActive(false)}
+            // onMouseEnter={() => {
+            //   setInfoActive(veg);
+            // }}
+            // onMouseLeave={() => setInfoActive(false)}
           >
             <p className="delete" onClick={() => unselectVeg(veg)}>
               x

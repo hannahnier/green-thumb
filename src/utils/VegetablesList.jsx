@@ -24,7 +24,7 @@ import redpepper from "../assets/vegetables/redpepper.jpeg";
 import snappea from "../assets/vegetables/snappea.jpeg";
 import sweetcorn from "../assets/vegetables/sweetcorn.jpeg";
 
-const vegUnselected2 = [
+const vegUnselected = [
   {
     name: "Tomato",
     src: tomato,
