@@ -27,7 +27,7 @@ header {
   font-weight: bold;
   letter-spacing: 0.1rem;
   height: 80px;
-  z-index: 2;
+  z-index: 6;
 }
 
 nav ul {
@@ -61,7 +61,7 @@ nav .navLink:hover {
 }
 
 .main {
-  width: clamp(320px, 70vw, 1000px);
+  width: clamp(320px, 85vw, 1000px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,12 +91,13 @@ nav .navLink:hover {
   margin-top: 1em;
 }
 
-.main .homeP {
+.main .homeP,
+.main .gardenP {
   color: #525e75;
   background-color: #76ba99;
   border-radius: 1em;
-  padding: 1em;
-  width: 350px;
+  padding: 1.5em;
+  width: 320px;
 }
 
 .main .link,
@@ -190,16 +191,22 @@ nav .navLink:hover {
   box-shadow: 2px -2px 5px 4px rgb(122, 74, 41);
 }
 
-.infoCard {
+/* Component "Infobox" */
+
+.vegContainer .infoCard {
   position: absolute;
-  width: 300px;
   z-index: 2;
+  width: 300px;
+}
+
+.infoCard {
   background-color: #f2ffe9;
   text-align: left;
   padding: 1rem;
 }
 
 .infoCard h2 {
+  font-size: 1rem;
   display: inline-block;
   padding-bottom: 0.5em;
   margin: 0.5em;
@@ -207,12 +214,12 @@ nav .navLink:hover {
 }
 
 .infoCard p {
-  font-size: 1.2em;
+  font-size: 0.8rem;
   margin: 0.5rem;
   font-family: "Abel", sans-serif;
 }
 
-.infoCard strong {
+.infoCard.cultivation strong {
   font-family: "Abel", sans-serif;
   color: #181f29;
 }
@@ -270,7 +277,7 @@ nav .navLink:hover {
   cursor: pointer;
 }
 
-/* My Garden (Component "Garden") */
+/* Component "Garden" */
 
 .main.garden h2.gardenTitle {
   border: 5px dotted #158467;
@@ -280,6 +287,7 @@ nav .navLink:hover {
 
 .gardenBox {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .patch {
@@ -287,25 +295,29 @@ nav .navLink:hover {
   width: 200px;
   margin: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .patch img.patchImg {
   width: 100%;
+  opacity: 0.7;
 }
 
 .patch .veg {
   position: absolute;
   width: 80px;
   left: calc(50% - 40px);
-  top: calc(50% - 40px);
+  top: 60px;
 }
 
 .patch .arrow {
   position: absolute;
-  top: calc(50% - 20px);
-  background-color: white;
+  top: 85px;
+  background-color: #158467;
   border: none;
-  padding: 0.5em;
+  padding: 0.5em 0.3em;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
@@ -313,19 +325,54 @@ nav .navLink:hover {
 }
 
 .patch .arrow:hover {
-  background-color: #76ba99;
+  background-color: #fff;
 }
 
 .patch .arrowToLeft {
-  left: 0;
+  left: -1em;
 }
 
 .patch .arrowToRight {
-  right: 0;
+  right: -1em;
 }
 
 .patch .infoCard {
-  width: 220px;
+  width: 100%;
+}
+
+.patch .heart {
+  width: 40px;
+  z-index: 3;
+  position: absolute;
+  right: -40px;
+  top: 0;
+}
+
+.patch .infoCard {
+  position: absolute;
+  z-index: 5;
+  width: 300px;
+  bottom: calc(-100%);
+}
+
+.patch .infoCard.neighbors {
+  background-color: #fa7070;
+}
+
+.patch .infoCard.neighbors h2 {
+  border-bottom: 3px solid #fff;
+}
+
+.patch .infoCard.neighbors p {
+  font-family: "Fragment Mono", monospace;
+}
+
+.patch .goodNeighbors {
+  position: absolute;
+}
+
+.patch .goodNeighbors img {
+  padding: 3px;
 }
 
 .toTopBtn {
@@ -370,20 +417,21 @@ footer {
   align-items: center;
 }
 
-@media (min-width: 990px) {
+@media (min-width: 1024px) {
   .home {
     flex-direction: row;
   }
   .titleImg {
-    margin: 1rem;
-    width: 300px;
-    height: 300px;
+    margin: 2rem;
+    width: 250px;
+    height: 250px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .titleImg {
-    width: 350px;
+    width: 300px;
+    height: 300px;
     margin: 3rem;
   }
 }

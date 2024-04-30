@@ -1,6 +1,6 @@
 const Infobox = ({ vegActive }) => {
   return (
-    <div className="infoCard">
+    <div className="infoCard cultivation">
       <h2>{vegActive.name}</h2>
       {vegActive.prebreed && (
         <p>

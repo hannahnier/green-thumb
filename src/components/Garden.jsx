@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Patch from "./Patch";
+import heart from "../assets/heart.png";
 
 const Garden = ({ refProp, vegSelected }) => {
   const [vegSelectedNew, setVegSelectedNew] = useState([...vegSelected]);
@@ -17,15 +18,19 @@ const Garden = ({ refProp, vegSelected }) => {
           />
         ))}
       </div>
-      <p style={{ height: "500px" }}></p>
-
-      {/* <p>
-        The vegetables in your garden have been arranged according to which
-        plants make good or bad neighbors to each other. This concept is called
-        companion planting. Following this gardening technique, two or more
-        species are planted together to enhance each other&apos;s growth, repel
-        pests, attract beneficial insects, or provide other benefits. 3(heart)
-      </p> */}
+      <p className="gardenP">
+        <img
+          src={heart}
+          alt="heart symbol"
+          style={{ width: "1.5em", marginRight: "1em", marginBottom: "1em" }}
+        />
+        According to the concept of <strong>Companion Planting</strong>,
+        vegetables can make good or bad neighbors to each other. Following this
+        gardening technique, certain species are planted together to enhance
+        each other&apos;s growth, repel pests, attract beneficial insects, or
+        provide other benefits. Move your plants around to figure out which ones
+        make a good fit.
+      </p>
       <a href="#top">
         <button className="toTopBtn">Back to top</button>
       </a>
