@@ -307,8 +307,7 @@ nav .navLink:hover {
 
 .patch .veg {
   position: absolute;
-  width: 80px;
-  left: calc(50% - 40px);
+  width: 100px;
   top: 60px;
 }
 
@@ -373,6 +372,8 @@ nav .navLink:hover {
 
 .patch .goodNeighbors img {
   padding: 3px;
+  width: 32px;
+  height: 35px;
 }
 
 .toTopBtn {

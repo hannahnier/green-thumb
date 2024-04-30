@@ -1,7 +1,5 @@
 import "../styles/generalStyle.css";
 import wood2 from "../assets/wood2.jpeg";
-// import { useState } from "react";
-// import Infobox from "./Infobox";
 
 const Selected = ({
   vegUnselected,
@@ -11,8 +9,6 @@ const Selected = ({
   gardenActive,
   setGardenActive,
 }) => {
-  // const [infoActive, setInfoActive] = useState(false);
-
   const unselectVeg = (veg) => {
     setGardenActive(false);
     setVegSelected(vegSelected.filter((x) => x.id !== veg.id));
@@ -36,10 +32,6 @@ const Selected = ({
             style={{
               background: `url(${wood2})`,
             }}
-            // onMouseEnter={() => {
-            //   setInfoActive(veg);
-            // }}
-            // onMouseLeave={() => setInfoActive(false)}
           >
             <p className="delete" onClick={() => unselectVeg(veg)}>
               x
@@ -49,14 +41,6 @@ const Selected = ({
               alt="vegetable"
               style={{ width: "100px", height: "100px" }}
             />
-
-            {/* {infoActive && infoActive.id === veg.id && (
-              <Infobox
-                vegActive={infoActive}
-                vegUnselected={vegUnselected}
-                veg={veg}
-              />
-            )} */}
           </button>
         ))}
       </div>

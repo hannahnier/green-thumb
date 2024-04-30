@@ -24,12 +24,12 @@ const Garden = ({ refProp, vegSelected }) => {
           alt="heart symbol"
           style={{ width: "1.5em", marginRight: "1em", marginBottom: "1em" }}
         />
-        According to the concept of <strong>Companion Planting</strong>,
-        vegetables can make good or bad neighbors to each other. Following this
-        gardening technique, certain species are planted together to enhance
-        each other&apos;s growth, repel pests, attract beneficial insects, or
-        provide other benefits. Move your plants around to figure out which ones
-        make a good fit.
+        Some vegetables can make good or bad companions to others. You can plant
+        friendly species next to each other and they will benefit from the good
+        neighborhood. <br />
+        <br />
+        Simply look at the small images of their friends and move your plants
+        around (or bring in new friends) to make them happy.
       </p>
       <a href="#top">
         <button className="toTopBtn">Back to top</button>

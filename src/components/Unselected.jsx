@@ -7,7 +7,6 @@ const Unselected = ({
   setVegUnselected,
   vegSelected,
   setVegSelected,
-  gardenActive,
   setGardenActive,
 }) => {
   const [infoActive, setInfoActive] = useState(false);

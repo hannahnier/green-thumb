@@ -48,14 +48,7 @@ const Patch = ({ veg, vegSelectedNew, setVegSelectedNew }) => {
         {veg.goodNeighbors &&
           VegetablesList.map((obj) => {
             if (veg.goodNeighbors.includes(obj.name)) {
-              return (
-                <img
-                  key={obj.id}
-                  title={obj.name}
-                  src={obj.src}
-                  style={{ width: "30px", height: "30px" }}
-                />
-              );
+              return <img key={obj.id} title={obj.name} src={obj.src} />;
             }
           })}
       </div>
