@@ -5,7 +5,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Fragment Mono", monospace;
-  /* border: 1px solid hotpink; */
 }
 
 html {
@@ -82,7 +81,8 @@ nav .navLink:hover {
   padding: 0.5em;
   color: white;
   background-color: #525e75;
-  border-radius: 20%;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
   text-decoration: none;
   font-style: italic;
 }
@@ -288,6 +288,7 @@ nav .navLink:hover {
 .gardenBox {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .patch {
@@ -313,7 +314,6 @@ nav .navLink:hover {
 
 .patch .arrow {
   position: absolute;
-  top: 85px;
   background-color: #158467;
   border: none;
   padding: 0.5em 0.3em;
@@ -321,6 +321,9 @@ nav .navLink:hover {
   font-weight: 700;
   cursor: pointer;
   z-index: 2;
+  height: 2em;
+  width: 2em;
+  transform: rotate(90deg);
 }
 
 .patch .arrow:hover {
@@ -328,15 +331,11 @@ nav .navLink:hover {
 }
 
 .patch .arrowToLeft {
-  left: -1em;
+  top: 0;
 }
 
 .patch .arrowToRight {
-  right: -1em;
-}
-
-.patch .infoCard {
-  width: 100%;
+  bottom: 0;
 }
 
 .patch .heart {
@@ -350,8 +349,12 @@ nav .navLink:hover {
 .patch .infoCard {
   position: absolute;
   z-index: 5;
-  width: 300px;
-  bottom: calc(-100%);
+  width: 100%;
+  bottom: calc(-120%);
+}
+
+.patch .infoCard {
+  display: none;
 }
 
 .patch .infoCard.neighbors {
@@ -368,6 +371,9 @@ nav .navLink:hover {
 
 .patch .goodNeighbors {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
 }
 
 .patch .goodNeighbors img {
@@ -416,6 +422,31 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 570px) {
+  .patch .arrow {
+    transform: none;
+    top: 85px;
+    width: 1.5em;
+    height: 2em;
+  }
+  .patch .arrowToLeft {
+    left: 0;
+  }
+  .patch .arrowToRight {
+    right: 0;
+  }
+
+  .patch .infoCard {
+    display: inline-block;
+  }
+
+  .patch .goodNeighbors {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
