@@ -11,8 +11,8 @@ const Home = () => {
           <p className="homeP">
             Can&apos;t wait to dive into the Gardening Season at last? Start
             today by choosing your vegetables and planning the patch. This app
-            will make sure that when the snow is finally melting and the garden
-            is calling, you are ready to get going!
+            will make sure that when the snow finally melts and the garden
+            starts calling, you are all set!
           </p>
         </div>
         <div className="titleImg">
