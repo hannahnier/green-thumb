@@ -24,4 +24,4 @@ Green Thumb is live and ready for you to explore at: [https://greenthumb.onrende
 
 ## Screenshot
 
-![App Screenshot](./src/assets/screenshots/screenshot_greenthumb.png)
+<img src="./src/assets/screenshots/screenshot_greenthumb.png" width="500" alt="App Screenshot">
