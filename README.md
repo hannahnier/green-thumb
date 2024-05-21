@@ -22,6 +22,6 @@ Green Thumb was created as a personal project for a practical application of Rea
 
 Green Thumb is live and ready for you to explore at: [https://greenthumb.onrender.com](https://greenthumb.onrender.com)
 
-## Screenshot
+## Preview
 
 <img src="./src/assets/screenshots/screenshot_greenthumb.png" width="500" alt="App Screenshot">
