@@ -18,10 +18,10 @@ Green Thumb helps gardening enthusiasts plan their vegetable patches by providin
 
 Green Thumb was created as a personal project for a practical application of React. This project offered a hands-on opportunity to deepen my understanding of [React](https://reactjs.org/), [Vite](https://vitejs.dev/) and [associated libraries](https://github.com/ReactTraining/react-router), allowing me to enhance my skills through practical experience.
 
+## Preview
+
+![App Screenshots](./src/assets/screenshots/screenshot_greenthumb.png)
+
 ## Explore the Website
 
 Green Thumb is live and ready for you to explore at: [https://greenthumb.onrender.com](https://greenthumb.onrender.com)
-
-## Preview
-
-<img src="./src/assets/screenshots/screenshot_greenthumb.png" width="500" alt="App Screenshot">
